@@ -69,7 +69,9 @@ export const MainPage: React.FC = () => {
     <S.MainPageContainer>
       <section>
         <S.SectionTitle>🔥 따끈따끈한 상품</S.SectionTitle>
-        <S.SectionDescription>등록된 지 얼마 안 된 따끈따끈한 제품들이에요</S.SectionDescription>
+        <S.SectionDescription style={{ marginBottom: '0.5rem' }}>
+          등록된 지 얼마 안 된 따끈따끈한 제품들이에요
+        </S.SectionDescription>
         <S.NewestItemSectionContentContainer>
           {TEST_ITEM_CARD_DATA.map((data, i) => (
             <ItemCard key={data.title + i.toString()} {...data} />

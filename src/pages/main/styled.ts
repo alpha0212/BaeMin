@@ -51,8 +51,19 @@ export const NewestItemSectionContentContainer = styled.div`
   width: 100%;
   display: flex;
   overflow: auto;
+  padding: 2rem;
 
   & > div:not(:last-child) {
     margin-right: 2rem;
+  }
+
+  & > div {
+    transition: all 300ms;
+  }
+
+  & > div:hover {
+    z-index: 99;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   }
 `;
