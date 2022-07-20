@@ -6,6 +6,9 @@ export const globalStyle = css`
   ${reset}
 
   :root {
+    --color-primary: #4cb050;
+    --color-primary-darker: #39933d;
+
     --color-border: #e2e3eb;
     --color-background: #ffffff;
     --color-text-primary: #1d1c24;
