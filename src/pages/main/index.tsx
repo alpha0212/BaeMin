@@ -72,13 +72,13 @@ export const MainPage: React.FC = () => {
         <S.SectionDescription style={{ marginBottom: '0.5rem' }}>
           등록된 지 얼마 안 된 따끈따끈한 제품들이에요
         </S.SectionDescription>
-        <S.NewestItemSectionContentContainer>
+        <S.NewestItemSectionItemsContainer>
           {TEST_ITEM_CARD_DATA.map((data, i) => (
             <ItemCard key={data.title + i.toString()} {...data} />
           ))}
-        </S.NewestItemSectionContentContainer>
+        </S.NewestItemSectionItemsContainer>
       </section>
-      <section>
+      <section style={{ marginBottom: '5rem' }}>
         <S.SectionTitle>📦 카테고리 </S.SectionTitle>
         <S.SectionDescription>좋은 제품들을 카테고리로 살펴보세요!</S.SectionDescription>
         <S.CategorySectionItemsContainer>

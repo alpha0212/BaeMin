@@ -47,7 +47,7 @@ export const CategorySectionItemWrapper = styled.div`
   }
 `;
 
-export const NewestItemSectionContentContainer = styled.div`
+export const NewestItemSectionItemsContainer = styled.div`
   width: 100%;
   display: flex;
   overflow: auto;
