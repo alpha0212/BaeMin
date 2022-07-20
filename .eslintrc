@@ -84,5 +84,5 @@
       }
     }
   },
-  "ignorePatterns": ["commitlint.config.js"]
+  "ignorePatterns": ["commitlint.config.js", "craco.config.js"]
 }
