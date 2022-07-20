@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 
 export const MainPageContainer = styled.div`
+  padding-bottom: 10rem;
+
   & > section:not(:last-child) {
     margin-bottom: 12rem;
   }
