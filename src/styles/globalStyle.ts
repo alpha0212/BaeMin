@@ -9,6 +9,7 @@ export const globalStyle = css`
     --color-border: #e2e3eb;
     --color-background: #ffffff;
     --color-text-primary: #1d1c24;
+    --color-text-secondary: #848894;
 
     --price-level-1: #32b038;
     --price-level-2: #2a952e;
@@ -31,7 +32,14 @@ export const globalStyle = css`
     font-size: 1.6rem;
     font-weight: 400;
     font-family: 'Spoqa Han Sans Neo', 'Robot', sans-serif;
+    letter-spacing: -0.05rem;
     color: var(--color-text-primary);
     background-color: var(--color-background);
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
   }
 `;
