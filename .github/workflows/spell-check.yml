@@ -1,0 +1,12 @@
+name: 'Code Spell Checker'
+on:
+  pull_request:
+  push:
+
+jobs:
+  spellcheck:
+    name: 'Spelling Check'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: streetsidesoftware/cspell-action@v2
