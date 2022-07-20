@@ -34,4 +34,10 @@ export const globalStyle = css`
     color: var(--color-text-primary);
     background-color: var(--color-background);
   }
+
+  .container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
 `;
