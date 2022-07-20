@@ -1,7 +1,8 @@
 import React from 'react';
 
-import HeartPNG from './assets/heart.png';
-import StarPNG from './assets/star.png';
+import HeartPNG from 'src/assets/heart.png';
+import StarPNG from 'src/assets/star.png';
+
 import * as S from './styled';
 
 export interface ItemCardProps {
