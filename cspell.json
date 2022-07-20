@@ -9,7 +9,8 @@
     "browserslist",
     "TTFB",
     "craco",
-    "spoqa"
+    "spoqa",
+    "danawa"
   ],
   "flagWords": [],
   "ignorePaths": ["node_modules/**"]
