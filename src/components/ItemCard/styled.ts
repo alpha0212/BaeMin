@@ -1,99 +1,77 @@
 import styled from '@emotion/styled';
 
 export const CardContainer = styled.div`
-  width: 100%;
-  height: 324px;
-`;
-export const Card = styled.div`
-  width: 250px;
-  height: 324px;
-  align-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  height: 32rem;
   padding: 2rem;
-
   background: #ffffff;
   border: 1px solid rgba(226, 227, 235, 0.8);
   border-radius: 1.6rem;
 `;
 
-export const SpanCard = styled.span`
+export const CarTitleContainer = styled.div`
   font-family: 'Spoqa Han Sans Neo';
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  line-height: 2rem;
   letter-spacing: -0.04em;
-
-  color: #000000;
+  color: var(--color-text-primary);
 `;
 
-export const ImageCard = styled.img`
-  width: 210px;
-  height: 151px;
-  left: 20px;
-  top: 20px;
+export const CardItemThumbnail = styled.img`
+  width: 100%;
+  height: 15rem;
   object-fit: cover;
+  margin-bottom: 0.5rem;
 `;
 
-export const PriceRangeCard = styled.span`
-  font-size: 12px;
-  color: #e9b738;
+export const ItemPriceRangeText = styled.p<{ color: string }>`
+  font-size: 1.2rem;
+  color: ${(props) => `var(${props.color})`};
 `;
 
-export const ReviewCard = styled.img`
+export const CardDetailContentContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+export const CardReviewsContainer = styled.div`
+  & > div:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+`;
+
+export const ReviewItemContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const ReviewItemImage = styled.img`
   font-size: 1.4rem;
-  left: 23px;
-  top: 256px;
+  margin-right: 0.2rem;
 `;
 
-export const distance = styled.div`
-  padding-top: 2rem;
-  width: 30px;
-  height: 15px;
+export const ReviewText = styled.p`
+  font-size: 1.2rem;
 `;
 
-export const ReviewText = styled.span`
-  width: 17px;
-  height: 15px;
-
-  font-family: 'Spoqa Han Sans Neo';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-
-  letter-spacing: -0.04em;
-  padding-left: 0.3rem;
-`;
-
-export const PriceCard = styled.span`
-  width: 94px;
-  height: 30px;
-  padding-left: 10rem;
-
-  font-family: 'Spoqa Han Sans Neo';
-  font-style: normal;
+export const CardItemPriceText = styled.p`
+  font-size: 2.4rem;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 5rem;
-  letter-spacing: -0.04em;
-
-  color: #dd2525;
+  color: var(--color-text-price);
 `;
-
-export const FlexCard = styled.div``;
 
 export const FlexText = styled.p`
   position: absolute;
-  top: 2.1rem;
-  font-family: 'Spoqa Han Sans Neo';
-  font-style: normal;
+  font-size: 1.2rem;
   font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: -0.04em;
   text-align: center;
-  padding: 0.3rem 1.2rem;
-
+  padding: 0.6rem 1.2rem;
   color: #ffffff;
-  background: #e9b738;
+  background: var(--price-level-5);
 `;
