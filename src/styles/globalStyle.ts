@@ -9,7 +9,11 @@ export const globalStyle = css`
     --color-border: #e2e3eb;
     --color-background: #ffffff;
     --color-text-primary: #1d1c24;
+    --color-text-description: #6a6a6a;
+    --color-text-price: #dd2525;
+    --color-text-flex: var(--color-background);
 
+    --price-level-0: #4f8bff;
     --price-level-1: #32b038;
     --price-level-2: #2a952e;
     --price-level-3: #227d26;
