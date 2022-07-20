@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ItemCard } from 'src/components';
+import { ItemCard, ItemCardHorizontal } from 'src/components';
 
 import * as S from './styled';
 
@@ -90,6 +90,16 @@ export const MainPage: React.FC = () => {
       <section>
         <S.SectionTitle>💡 추천드리는 상품</S.SectionTitle>
         <S.SectionDescription>오만상사에서 고객님께 추천드리는 상품들이에요</S.SectionDescription>
+        <S.RecommendItemSectionItemsContainer>
+          {TEST_ITEM_CARD_DATA.map((data, i) => (
+            <ItemCardHorizontal
+              key={data.title + i.toString()}
+              buyCount={1000}
+              {...data}
+              isFlexItem
+            />
+          ))}
+        </S.RecommendItemSectionItemsContainer>
       </section>
     </S.MainPageContainer>
   );

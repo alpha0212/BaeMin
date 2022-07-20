@@ -67,3 +67,9 @@ export const NewestItemSectionItemsContainer = styled.div`
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   }
 `;
+
+export const RecommendItemSectionItemsContainer = styled.div`
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+`;
