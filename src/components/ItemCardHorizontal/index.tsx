@@ -46,7 +46,7 @@ export const ItemCardHorizontal: React.FC<ItemCardHorizontalType> = ({
   const [priceData] = useState(priceKeywordValue());
 
   const priceString = price.toLocaleString(undefined, { minimumFractionDigits: 0 });
-  const buyCoundString = buyCount.toLocaleString(undefined, { minimumFractionDigits: 0 });
+  const buyCountString = buyCount.toLocaleString(undefined, { minimumFractionDigits: 0 });
   return (
     <S.ItemCardHorizontalContainer>
       {priceData.isFlexItem ? <S.ItemFLexIF>Flex 제품</S.ItemFLexIF> : ''}
@@ -57,7 +57,7 @@ export const ItemCardHorizontal: React.FC<ItemCardHorizontalType> = ({
         <S.ItemPriceKeyWord priceColor={priceData.color}>{priceData.text}</S.ItemPriceKeyWord>
         <S.ItemTitle>{title}</S.ItemTitle>
         <S.ItemReViewBox>
-          <S.ItemBuyCount>구매 {buyCoundString}</S.ItemBuyCount>
+          <S.ItemBuyCount>구매 {buyCountString}</S.ItemBuyCount>
           <S.ItemGrade src={StarPNG} />
           {grade}
           <S.ItemHeart src={HeartPNG} />
