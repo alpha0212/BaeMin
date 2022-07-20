@@ -65,6 +65,45 @@ export const MainPage: React.FC = () => {
     },
   ];
 
+  const ITEM_CARD_CODE = [
+    {
+      "code": 2786921,
+      "type": "danawa"
+    },
+    {
+      "code": 3427959,
+      "type": "danawa"
+    },
+    {
+      "code": 12076547,
+      "type": "danawa"
+    },
+    {
+      "code": 6231709,
+      "type": "danawa"
+    },
+    {
+      "code": 8206648,
+      "type": "danawa"
+    },
+    {
+      "code": 16102643,
+      "type": "danawa"
+    },
+    {
+      "code": 25606471522,
+      "type": "naver"
+    },
+    {
+      "code": 12948410,
+      "type": "danawa"
+    },
+    {
+      "code": 12387557,
+      "type": "danawa"
+    }
+  ];
+
   return (
     <S.MainPageContainer>
       <section>
