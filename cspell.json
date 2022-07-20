@@ -10,7 +10,8 @@
     "TTFB",
     "craco",
     "spoqa",
-    "danawa"
+    "danawa",
+    "naver"
   ],
   "flagWords": [],
   "ignorePaths": ["node_modules/**"]
