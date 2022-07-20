@@ -6,12 +6,75 @@ import * as S from './styled';
 
 export const MainPage: React.FC = () => {
   const CATEGORIES = ['키보드/마우스', '블루투스 이어폰', '스마트워치'];
+  const TEST_ITEM_CARD_DATA = [
+    {
+      imageUrl: '',
+      title: 'COX CK87 블랙 게이트론 LED 게이밍 기계식 (황축)',
+      price: 50000,
+      grade: '5.0',
+      heart: 1400,
+    },
+    {
+      imageUrl: '',
+      title: 'COX CK87 블랙 게이트론 LED 게이밍 기계식 (황축)',
+      price: 40000,
+      grade: '5.0',
+      heart: 1400,
+    },
+    {
+      imageUrl: '',
+      title: 'COX CK87 블랙 게이트론 LED 게이밍 기계식 (황축)',
+      price: 30000,
+      grade: '5.0',
+      heart: 1400,
+    },
+    {
+      imageUrl: '',
+      title: 'COX CK87 블랙 게이트론 LED 게이밍 기계식 (황축)',
+      price: 20000,
+      grade: '5.0',
+      heart: 1400,
+    },
+    {
+      imageUrl: '',
+      title: 'COX CK87 블랙 게이트론 LED 게이밍 기계식 (황축)',
+      price: 10000,
+      grade: '5.0',
+      heart: 1400,
+    },
+    {
+      imageUrl: '',
+      title: 'COX CK87 블랙 게이트론 LED 게이밍 기계식 (황축)',
+      price: 30000,
+      grade: '5.0',
+      heart: 1400,
+    },
+    {
+      imageUrl: '',
+      title: 'COX CK87 블랙 게이트론 LED 게이밍 기계식 (황축)',
+      price: 20000,
+      grade: '5.0',
+      heart: 1400,
+    },
+    {
+      imageUrl: '',
+      title: 'COX CK87 블랙 게이트론 LED 게이밍 기계식 (황축)',
+      price: 1000,
+      grade: '5.0',
+      heart: 1400,
+    },
+  ];
 
   return (
     <S.MainPageContainer>
       <section>
         <S.SectionTitle>🔥 따끈따끈한 상품</S.SectionTitle>
         <S.SectionDescription>등록된 지 얼마 안 된 따끈따끈한 제품들이에요</S.SectionDescription>
+        <S.NewestItemSectionContentContainer>
+          {TEST_ITEM_CARD_DATA.map((data, i) => (
+            <ItemCard key={data.title + i.toString()} {...data} />
+          ))}
+        </S.NewestItemSectionContentContainer>
       </section>
       <section>
         <S.SectionTitle>📦 카테고리 </S.SectionTitle>
