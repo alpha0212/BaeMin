@@ -10,7 +10,7 @@ type ItemCardHorizontalType = {
   title: string;
   price: number;
   grade: string | number;
-  buyCound: number;
+  buyCount: number;
   heart: string | number;
 };
 
@@ -19,7 +19,7 @@ export const ItemCardHorizontal: React.FC<ItemCardHorizontalType> = ({
   title,
   price,
   grade,
-  buyCound,
+  buyCount,
   heart,
 }) => {
   const priceKeywordValue = () => {
@@ -46,7 +46,7 @@ export const ItemCardHorizontal: React.FC<ItemCardHorizontalType> = ({
   const [priceData] = useState(priceKeywordValue());
 
   const priceString = price.toLocaleString(undefined, { minimumFractionDigits: 0 });
-  const buyCoundString = buyCound.toLocaleString(undefined, { minimumFractionDigits: 0 });
+  const buyCoundString = buyCount.toLocaleString(undefined, { minimumFractionDigits: 0 });
   return (
     <S.ItemCardHorizontalContainer>
       {priceData.isFlexItem ? <S.ItemFLexIF>Flex 제품</S.ItemFLexIF> : ''}

@@ -14,7 +14,7 @@ export const MainPage: React.FC = () => (
       title="COX CK87 블랙 게이트론 LED 게이밍 기계식 (황축)"
       price={priceState}
       grade={4.5}
-      buyCound={butCountState}
+      buyCount={butCountState}
       heart={21}
     />
   </S.TestContainer>
