@@ -1,68 +1,56 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import HeartPNG from 'src/assets/heart.png';
 import StarPNG from 'src/assets/star.png';
+import { usePriceProps } from 'src/hooks';
 
 import * as S from './styled';
 
-type ItemCardHorizontalType = {
-  image: string;
+export interface ItemCardHorizontalProps {
+  imageUrl: string;
   title: string;
   price: number;
-  grade: string | number;
+  grade: string;
   buyCount: number;
-  heart: string | number;
-};
+  heart: number;
+  isFlexItem?: boolean;
+}
 
-export const ItemCardHorizontal: React.FC<ItemCardHorizontalType> = ({
-  image,
+export const ItemCardHorizontal: React.FC<ItemCardHorizontalProps> = ({
+  imageUrl,
   title,
   price,
   grade,
   buyCount,
   heart,
+  isFlexItem = false,
 }) => {
-  const priceKeywordValue = () => {
-    if (price >= 0 && price < 10000) {
-      return { text: '천원대', color: '--price-level-0' };
-    }
-    if (price >= 10000 && price < 20000) {
-      return { text: '1만원대', color: '--price-level-1' };
-    }
-    if (price >= 20000 && price < 30000) {
-      return { text: '2만원대', color: '--price-level-2' };
-    }
-    if (price >= 30000 && price < 40000) {
-      return { text: '3만원대', color: '--price-level-3' };
-    }
-    if (price >= 40000 && price < 50000) {
-      return { text: '4만원대', color: '--price-level-4' };
-    }
-    if (price >= 50000 && price < 60000) {
-      return { text: '5만원대', color: '--price-level-5', isFlexItem: true };
-    }
-    return { text: '5만원대', color: '--price-level-5' };
-  };
-  const [priceData] = useState(priceKeywordValue());
-
+  const { text, color } = usePriceProps(price);
   const priceString = price.toLocaleString(undefined, { minimumFractionDigits: 0 });
   const buyCountString = buyCount.toLocaleString(undefined, { minimumFractionDigits: 0 });
+
   return (
     <S.ItemCardHorizontalContainer>
-      {priceData.isFlexItem ? <S.ItemFLexIF>Flex 제품</S.ItemFLexIF> : ''}
-      <S.ItemImageBox>
-        <S.ItemImage src={image} />
-      </S.ItemImageBox>
+      {isFlexItem && <S.FlexText>FLEX 제품</S.FlexText>}
+      <S.CardItemThumbnail src={imageUrl} />
       <S.ItemBox>
-        <S.ItemPriceKeyWord priceColor={priceData.color}>{priceData.text}</S.ItemPriceKeyWord>
-        <S.ItemTitle>{title}</S.ItemTitle>
-        <S.ItemReViewBox>
-          <S.ItemBuyCount>구매 {buyCountString}</S.ItemBuyCount>
-          <S.ItemGrade src={StarPNG} />
-          {grade}
-          <S.ItemHeart src={HeartPNG} />
-          {heart}
-        </S.ItemReViewBox>
+        <div>
+          <S.ItemPriceRangeText priceColor={color}>{text}</S.ItemPriceRangeText>
+          <S.ItemTitle>{title}</S.ItemTitle>
+          <S.ReviewItemContainer>
+            <S.ReviewItemContainer>
+              <p>구매 {buyCountString}</p>
+            </S.ReviewItemContainer>
+            <S.ReviewItemContainer>
+              <img src={StarPNG} alt="" />
+              <p>{grade}</p>
+            </S.ReviewItemContainer>
+            <S.ReviewItemContainer>
+              <img src={HeartPNG} alt="" />
+              <p>{heart}</p>
+            </S.ReviewItemContainer>
+          </S.ReviewItemContainer>
+        </div>
         <S.ItemPriceBox>
           <S.ItemPrice>{priceString}원</S.ItemPrice>
         </S.ItemPriceBox>

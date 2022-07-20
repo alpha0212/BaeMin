@@ -6,64 +6,56 @@ type ItemPriceKeyWordProps = {
 
 export const ItemCardHorizontalContainer = styled.div`
   position: relative;
-  width: 54.5rem;
+  width: 100%;
+  min-width: 54.5;
   height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem;
+  background: var(--color-background);
   border: 1px solid var(--color-border);
   border-radius: 20px;
-  background: var(--color-background);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `;
 
-export const ItemImageBox = styled.div`
-  width: 21.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const ItemImage = styled.img`
-  width: 13.4rem;
-  height: 13.1rem;
+export const CardItemThumbnail = styled.img`
+  height: 15rem;
+  width: 15rem;
   object-fit: cover;
+  margin-right: 2rem;
 `;
 
 export const ItemBox = styled.div`
-  font-weight: bold;
-  flex: 1;
   height: 100%;
-  justify-content: center;
-  padding-right: 3rem;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 `;
 
-export const ItemPriceKeyWord = styled.div<ItemPriceKeyWordProps>`
+export const ItemPriceRangeText = styled.div<ItemPriceKeyWordProps>`
   font-size: 1.4rem;
+  font-weight: 500;
   color: var(${(props) => props.priceColor});
+  margin-bottom: 0.5rem;
 `;
 
 export const ItemTitle = styled.div`
   font-size: 1.8rem;
+  font-weight: 500;
   color: var(--color-text-primary);
-  padding-top: 3px;
-  padding-bottom: 3px;
+  margin-bottom: 1rem;
 `;
 
-export const ItemReViewBox = styled.div`
-  width: 14.6rem;
-  font-size: 1.2rem;
-  color: var(--color-text-description);
+export const ReviewItemContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  color: #6a6a6a;
+  font-size: 1.4rem;
+
+  & > div:not(:last-child) {
+    margin-right: 0.5rem;
+  }
 `;
-
-export const ItemBuyCount = styled.div``;
-
-export const ItemGrade = styled.img``;
-
-export const ItemHeart = styled.img``;
 
 export const ItemPriceBox = styled.div`
   display: flex;
@@ -72,19 +64,19 @@ export const ItemPriceBox = styled.div`
 
 export const ItemPrice = styled.div`
   font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
   color: var(--color-text-price);
 `;
 
-export const ItemFLexIF = styled.div`
+export const FlexText = styled.div`
   position: absolute;
-  color: var(--color-text-flex);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 2.5rem;
+  left: 2.5rem;
   font-size: 1.2rem;
-  width: 7.8rem;
-  height: 2.2rem;
-  background-color: var(--color-flex);
-  top: 20px;
-  left: 25px;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.6rem 1.2rem;
+  color: var(--color-text-flex);
+  background: var(--price-level-5);
 `;
