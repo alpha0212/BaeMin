@@ -83,5 +83,6 @@
         "project": "./tsconfig.json"
       }
     }
-  }
+  },
+  "ignorePatterns": ["commitlint.config.js"]
 }
