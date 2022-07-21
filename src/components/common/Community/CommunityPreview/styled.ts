@@ -11,6 +11,8 @@ export const CommunityPreviewContainer = styled.div`
   justify-content: center;
   padding-left: 20px;
   padding-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 `;
 
 export const CommunityPreviewIamge = styled.img`
@@ -18,6 +20,7 @@ export const CommunityPreviewIamge = styled.img`
   height: 11.3rem;
   object-fit: cover;
   margin-right: 10px;
+  border-radius: 10px;
 `;
 
 export const CommunityPreviewBox = styled.div`
