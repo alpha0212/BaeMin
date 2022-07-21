@@ -8,7 +8,7 @@ export const CommunityPage = () => {
   const TEST_COMMUNITY_PREVIEW_DATA = [
     {
       title: '5만원 미만의 가성비 전자제품 6가지 - 킹성비 샤오미 제품 2탄',
-      writer: 'TOPPICK',
+      writer: '탑픽',
       content:
         '가격이 착한 가성비 전자제품을 찾는 분들을 위해 오늘은 5만원 이내의 전자제품 중 성능이 재미있고 뛰어난 제품 6가지를 준비했습니다!',
       image:
@@ -17,7 +17,7 @@ export const CommunityPage = () => {
     },
     {
       title: '5만원 미만의 가성비 전자제품 - 킹성비 샤오미 제품',
-      writer: 'TOPPICK',
+      writer: '탑픽',
       content:
         '350ml로 휴대할 수 있는 크기의 믹서기다. 디자인도 깔끔하고 믹서기 기능 자체도 좋은 제품이다. ',
       image:
