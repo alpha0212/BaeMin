@@ -20,6 +20,7 @@ export const App: React.FC = () => (
     >
       <Route index element={<MainPage />} />
       <Route path="auth">
+        <Route path="write" element={<CommunityWrite />} />
         <Route path="login" element={<AuthPage />} />
         <Route path="register" element={<AuthPage />} />
       </Route>
