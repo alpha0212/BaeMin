@@ -10,7 +10,6 @@ export const CommunityWriteContainer = styled.div`
 `;
 
 export const CommunityWriteIntroduce = styled.p`
-  padding-top: 25rem;
   padding-bottom: 1.7rem;
   font-size: 2.4rem;
 `;

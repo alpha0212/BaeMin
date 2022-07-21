@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { CommunityPreview } from 'src/components/common/Community/CommunityPreview';
 
@@ -41,9 +42,9 @@ export const CommunityPage = () => {
           <S.CommunityTextTitle>📝 커뮤니티</S.CommunityTextTitle>
           <S.CommunityTextDescription>여러 사람과 소통해봐요! </S.CommunityTextDescription>
         </div>
-        <a href="/">
+        <Link to="/community/write">
           <S.CommunityWriteButton>글쓰기</S.CommunityWriteButton>
-        </a>
+        </Link>
       </S.CommunityTextBox>
       <S.CommunityPreviewListBox>
         {TEST_COMMUNITY_PREVIEW_DATA.map((data, i) => (
