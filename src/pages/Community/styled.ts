@@ -29,7 +29,7 @@ export const CommunityTextDescription = styled.div`
   color: var(--color-text-description);
 `;
 
-export const CommunityWriteButtin = styled.button`
+export const CommunityWriteButton = styled.button`
   text-decoration: none;
   width: 12.6rem;
   height: 4.1rem;

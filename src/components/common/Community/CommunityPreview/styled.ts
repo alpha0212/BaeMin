@@ -15,7 +15,7 @@ export const CommunityPreviewContainer = styled.div`
   margin-bottom: 10px;
 `;
 
-export const CommunityPreviewIamge = styled.img`
+export const CommunityPreviewImage = styled.img`
   width: 12.8rem;
   height: 11.3rem;
   object-fit: cover;

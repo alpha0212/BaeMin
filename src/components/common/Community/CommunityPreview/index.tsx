@@ -18,7 +18,7 @@ export const CommunityPreview: React.FC<CommunityPreviewType> = ({
   data,
 }) => (
   <S.CommunityPreviewContainer>
-    <S.CommunityPreviewIamge src={image} />
+    <S.CommunityPreviewImage src={image} />
     <S.CommunityPreviewBox>
       <S.CommunityPreviewTitle>{title}</S.CommunityPreviewTitle>
       <S.CommunityPreviewContent>{content}</S.CommunityPreviewContent>

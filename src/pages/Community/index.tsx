@@ -42,7 +42,7 @@ export const CommunityPage = () => {
           <S.CommunityTextDescription>여러 사람과 소통해봐요! </S.CommunityTextDescription>
         </div>
         <a href="/">
-          <S.CommunityWriteButtin>글쓰기</S.CommunityWriteButtin>
+          <S.CommunityWriteButton>글쓰기</S.CommunityWriteButton>
         </a>
       </S.CommunityTextBox>
       <S.CommunityPreviewListBox>
