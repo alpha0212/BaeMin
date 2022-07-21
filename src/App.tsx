@@ -18,12 +18,12 @@ export const App: React.FC = () => (
         </>
       }
     >
-      <Route element={<MainPage />} />
-      <Route index element={<CommunityPage />} />
+      <Route index element={<MainPage />} />
       <Route path="auth">
         <Route path="login" element={<AuthPage />} />
         <Route path="register" element={<AuthPage />} />
       </Route>
+      <Route path="community" element={<CommunityPage />} />
     </Route>
   </Routes>
 );
