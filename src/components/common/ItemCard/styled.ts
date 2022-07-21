@@ -14,6 +14,7 @@ export const CardContainer = styled.div`
 `;
 
 export const CarTitleContainer = styled.div`
+  width: 100%;
   font-family: 'Spoqa Han Sans Neo';
   font-style: normal;
   font-weight: 500;
