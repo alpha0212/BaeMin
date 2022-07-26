@@ -1,31 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import LogoPNG from 'src/assets/logo.png';
+import BlogPNG from 'src/assets/Blog.png';
+import FacebookPNG from 'src/assets/Facebook.png';
+import InstaPNG from 'src/assets/Insta.png';
+import LogoPNG from 'src/assets/Logo.png';
+import YoutubePNG from 'src/assets/Youtube.png';
 
 import * as S from './styled';
 
 export const Navbar: React.FC = () => (
   <S.NavbarContainer>
-    <div
-      className="container"
-      style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
-    >
-      <Link to="/">
-        <S.NavbarLogo src={LogoPNG} alt="오만상사 로고" />
-      </Link>
-
-      <Link
-        to="community"
-        style={{
-          fontSize: '1.8rem',
-          fontWeight: 500,
-          textDecoration: 'none',
-          color: 'var(--color-text-primary)',
-        }}
-      >
-        커뮤니티
-      </Link>
-    </div>
+    <S.NavbarLogo src={LogoPNG} />
+    <S.LogoContainer>
+      <S.Logoli>
+        <S.NavbarSocialLogo src={FacebookPNG} />
+      </S.Logoli>
+      <S.Logoli>
+        <S.NavbarSocialLogo src={InstaPNG} />
+      </S.Logoli>
+      <S.Logoli>
+        <S.NavbarSocialLogo src={BlogPNG} />
+      </S.Logoli>
+      <S.Logoli>
+        <S.NavbarSocialLogo src={YoutubePNG} />
+      </S.Logoli>
+    </S.LogoContainer>
   </S.NavbarContainer>
 );

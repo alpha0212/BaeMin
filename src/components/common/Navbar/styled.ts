@@ -1,18 +1,38 @@
 import styled from '@emotion/styled';
 
-export const NavbarContainer = styled.header`
+export const NavbarContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 8.4rem;
-  background: rgba(255, 255, 255, 0.8);
-  border-bottom: 1px solid #e2e3eb;
-  backdrop-filter: blur(7px);
+  width: 102.4rem;
+  margin: 0rem auto;
+  padding: 5rem 5rem 0rem;
+`;
+
+export const NavbarSocialLogo = styled.img`
+  margin-top: 1rem;
+  object-fit: cover;
+  @media screen and (max-width: 1025px) {
+    display: none;
+  }
 `;
 
 export const NavbarLogo = styled.img`
-  width: 15.9rem;
-  height: 6.2rem;
-  margin-top: 1rem;
+  object-fit: contain;
+  display: flex;
+  float: none;
+  width: 28%;
+  height: auto;
+  max-width: 14.2rem;
+`;
+
+export const LogoContainer = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+`;
+
+export const Logoli = styled.li`
+  display: flex;
 `;

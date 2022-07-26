@@ -33,6 +33,7 @@ export const globalStyle = css`
 
   html {
     font-size: 10px;
+    color: #fff;
   }
 
   body {
@@ -42,6 +43,24 @@ export const globalStyle = css`
     letter-spacing: -0.05rem;
     color: var(--color-text-primary);
     background-color: var(--color-background);
+    background-image: url('https://source.unsplash.com/featured/?food');
+  }
+
+  .outer {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .outer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .inner {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
   }
 
   .container {

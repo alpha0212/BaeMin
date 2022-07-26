@@ -1,2 +1,2 @@
 export * from './main';
-export * from './Community';
+export * from './background';
